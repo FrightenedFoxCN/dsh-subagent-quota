@@ -1,0 +1,19 @@
+{
+  "name": "@local/dsh-subagent-quota",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "Per-preset soft quota for subagent creation: a delegation tool that refuses to start a child when the caller's tree already holds too many.",
+  "main": "index.js",
+  "exports": {
+    ".": "./index.js",
+    "./package.json": "./package.json"
+  },
+  "files": ["index.js", "cordis.patch.yml", "README.md"],
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    }
+  },
+  "license": "MIT"
+}
